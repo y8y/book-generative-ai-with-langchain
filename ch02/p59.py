@@ -6,7 +6,7 @@ set_environment()
 chat = ChatOpenAI(model="deepseek-chat")
 messages = [
     SystemMessage(content="You're a helpful programming assistant"),
-    HumanMessage(content="Write a Python function to calculate factorial")
+    HumanMessage(content="Write a Python function to calculate factorial"),
 ]
 
 response = chat.invoke(messages)
