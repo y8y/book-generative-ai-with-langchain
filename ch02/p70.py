@@ -12,9 +12,7 @@ llm = ChatOpenAI(model="deepseek-chat")
 story_prompt = PromptTemplate.from_template("写一个关于以下主题的故事：{topic}")
 story_chain = story_prompt | llm | StrOutputParser()
 # Second chain analyzes the story
-analysis_prompt = PromptTemplate.from_template(
-    "分析以下故事的情绪:\n{story}"
-)
+analysis_prompt = PromptTemplate.from_template("分析以下故事的情绪:\n{story}")
 analysis_chain = analysis_prompt | llm | StrOutputParser()
 
 # Combine chains
