@@ -3,6 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # Initialize Ollama with your chosen model
+# 需要先执行 ollama server
 local_llm = ChatOllama(
     model="deepseek-r1:1.5b",
     temperature=0,
